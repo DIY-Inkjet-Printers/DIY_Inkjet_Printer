@@ -1,1 +1,1 @@
-# Multi_Nozzle_DIY_Inkjet
+# Multi_Nozzle_DIY_Inkjet_Printer
