@@ -1,3 +1,18 @@
+"""
+Post Processing Script to create GCODE from X,Y positions of Dot Matrix Images
+
+It should work with Matthew Rayfield's Pixels to Gcode:
+https://matthewrayfield.com/tools/pixels-to-gcode/
+
+To work with other tools the find and replace input part must be changed.
+
+Many lines are commented out which are for multi nozzle setup.
+"""
+
+#tkinter for file selection
+from tkinter import filedialog as fd
+filename = fd.askopenfilename()
+
 #start and endcode
 startcode = "G28\nG01 X0.0 Y0.0 F3600"
 endcode = "\nG01 X55 Y10"
@@ -25,7 +40,7 @@ tool0y = 0.0
 # tool9y = 0.0
 
 #read from file
-with open("pixels.gcode") as infile:
+with open(filename) as infile:
     instr = infile.read()
 
 #find and replace text for the right input format
@@ -465,7 +480,7 @@ dstr14 = dstr13.replace(", ", " Y")
 dstr15 = dstr14 + endcode
 
 #write to file
-f = open("inkjet.gcode", "w")
+f = open(filename[:-6] + "-out" + ".gcode", "w")
 f.write(str(dstr15))
 f.close()
 
