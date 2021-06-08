@@ -1,13 +1,13 @@
 //define variables
 #include <Wire.h>
-#define tool0A 4
-#define tool0B 5
-#define tool1A 6
-#define tool1B 7
-#define tool2A 8
-#define tool2B 9
-#define tool3A 10
-#define tool3B 11
+#define tool0A 13
+#define tool0B 12
+#define tool1A 11
+#define tool1B 10
+#define tool2A 9
+#define tool2B 8
+#define tool3A 7
+#define tool3B 6
 boolean shoot0 = false;
 boolean shoot1 = false;
 boolean shoot2 = false;
