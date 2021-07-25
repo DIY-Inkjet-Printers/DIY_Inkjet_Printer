@@ -1,23 +1,20 @@
 //define variables
 #include <Wire.h>
-#define tool0A 13
-#define tool0B 12
-#define tool1A 11
-#define tool1B 10
-#define tool2A 9
-#define tool2B 8
-#define tool3A 7
-#define tool3B 6
-boolean shoot0 = false;
-boolean shoot1 = false;
-boolean shoot2 = false;
-boolean shoot3 = false;
-enum DoD0 {idle0, forwards0, backwards0};
-DoD0 dod0;
-enum DoD1 {idle1, forwards1, backwards1};
-DoD1 dod1;
-unsigned long saved_time0;
-unsigned long saved_time1;
+#define tool_0 5
+#define tool_1 4
+#define tool_2 3
+#define tool_3 2
+
+boolean shoot_0 = false;
+boolean shoot_1 = false;
+boolean shoot_2 = false;
+boolean shoot_3 = false;
+enum DoD_0 {idle_0, on_0, off_0};
+DoD_0 dod_0;
+enum DoD_1 {idle_1, on_1, off_1};
+DoD_1 dod_1;
+unsigned long saved_time_0;
+unsigned long saved_time_1;
 byte i2c_message;
 
 
@@ -26,14 +23,10 @@ void setup() {
   Serial.begin(9600);
   Wire.begin(9);
   Wire.onReceive(receiveEvent);
-  pinMode(tool0A, OUTPUT);
-  pinMode(tool0B, OUTPUT);
-  pinMode(tool1A, OUTPUT);
-  pinMode(tool1B, OUTPUT);
-  pinMode(tool2A, OUTPUT);
-  pinMode(tool2B, OUTPUT);
-  pinMode(tool3A, OUTPUT);
-  pinMode(tool3B, OUTPUT);
+  pinMode(tool_0, OUTPUT);
+  pinMode(tool_1, OUTPUT);
+  pinMode(tool_2, OUTPUT);
+  pinMode(tool_3, OUTPUT);
 }
 
 
@@ -45,124 +38,108 @@ void receiveEvent() {
   }
 
   if (bitRead(i2c_message, 0) == 1 ) {
-    dod1 = forwards1;
-    shoot0 = true;
+    dod_1 = on_1;
+    shoot_0 = true;
   }
   if (bitRead(i2c_message, 1) == 1 ) {
-    dod1 = forwards1;
-    shoot1 = true;
+    dod_1 = on_1;
+    shoot_1 = true;
   }
   if (bitRead(i2c_message, 2) == 1 ) {
-    shoot2 = true;
-    dod1 = forwards1;
+    shoot_2 = true;
+    dod_1 = on_1;
   }
   if (bitRead(i2c_message, 3) == 1 ) {
-    shoot3 = true;
-    dod1 = forwards1;
+    shoot_3 = true;
+    dod_1 = on_1;
   }
   if (bitRead(i2c_message, 4) == 1 ) {
-    dod0 = forwards0;
+    dod_0 = on_0;
   }
   if (bitRead(i2c_message, 4) == 0 ) {
-    dod0 = idle0;
+    dod_0 = idle_0;
   }
 }
 
 
 //to start the printhead from printer menu
 void loop() {
-  switch (dod0) {
-    case idle0:
+  switch (dod_0) {
+    case idle_0:
       break;
-    case forwards0:
-      if (millis() - saved_time0 < 5) {
-        digitalWrite(tool0A, HIGH);
-        digitalWrite(tool0B, LOW);
-        digitalWrite(tool1A, HIGH);
-        digitalWrite(tool1B, LOW);
-        digitalWrite(tool2A, HIGH);
-        digitalWrite(tool2B, LOW);
-        digitalWrite(tool3A, HIGH);
-        digitalWrite(tool3B, LOW);
+    case on_0:
+      if (millis() - saved_time_0 < 100) {
+        digitalWrite(tool_0, HIGH);
+        digitalWrite(tool_1, HIGH);
+        digitalWrite(tool_2, HIGH);
+        digitalWrite(tool_3, HIGH);
       }
       else {
-        dod0 = backwards0;
+        dod_0 = off_0;
       }
       break;
-    case backwards0:
-      if (millis() - saved_time0 < 100) {
-        digitalWrite(tool0A, LOW);
-        digitalWrite(tool0B, HIGH);
-        digitalWrite(tool1A, LOW);
-        digitalWrite(tool1B, HIGH);
-        digitalWrite(tool2A, LOW);
-        digitalWrite(tool2B, HIGH);
-        digitalWrite(tool3A, LOW);
-        digitalWrite(tool3B, HIGH);
+    case off_0:
+      if (millis() - saved_time_0 < 200) {
+        digitalWrite(tool_0, LOW);
+        digitalWrite(tool_1, LOW);
+        digitalWrite(tool_2, LOW);
+        digitalWrite(tool_3, LOW);
       }
       else
       {
-        dod0 = forwards0;
-        saved_time0 = millis();
+        dod_0 = on_0;
+        saved_time_0 = millis();
       }
       break;
   }
 
 
   // eject drop on demand
-  switch (dod1) {
-    case idle1:
-      saved_time1 = millis();
-      shoot0 = false;
-      shoot1 = false;
-      shoot2 = false;
-      shoot3 = false;
+  switch (dod_1) {
+    case idle_1:
+      saved_time_1 = millis();
+      shoot_0 = false;
+      shoot_1 = false;
+      shoot_2 = false;
+      shoot_3 = false;
       break;
-    case forwards1:
-      if (millis() - saved_time1 < 5) {
-        if (shoot0 == true) {
-          digitalWrite(tool0A, HIGH);
-          digitalWrite(tool0B, LOW);
+    case on_1:
+      if (millis() - saved_time_1 < 5) {
+        if (shoot_0 == true) {
+          digitalWrite(tool_0, HIGH);
         }
-        if (shoot1 == true) {
-          digitalWrite(tool1A, HIGH);
-          digitalWrite(tool1B, LOW);
+        if (shoot_1 == true) {
+          digitalWrite(tool_1, HIGH);
         }
-        if (shoot2 == true) {
-          digitalWrite(tool2A, HIGH);
-          digitalWrite(tool2B, LOW);
+        if (shoot_2 == true) {
+          digitalWrite(tool_2, HIGH);
         }
-        if (shoot3 == true) {
-          digitalWrite(tool3A, HIGH);
-          digitalWrite(tool3B, LOW);
+        if (shoot_3 == true) {
+          digitalWrite(tool_3, HIGH);
         }
       }
       else {
-        dod1 = backwards1;
+        dod_1 = off_1;
       }
       break;
-    case backwards1:
-      if (millis() - saved_time1 < 50) {
-        if (shoot0 == true) {
-          digitalWrite(tool0A, LOW);
-          digitalWrite(tool0B, HIGH);
+    case off_1:
+      if (millis() - saved_time_1 < 50) {
+        if (shoot_0 == true) {
+          digitalWrite(tool_0, LOW);
         }
-        if (shoot1 == true) {
-          digitalWrite(tool1A, LOW);
-          digitalWrite(tool1B, HIGH);
+        if (shoot_1 == true) {
+          digitalWrite(tool_1, LOW);
         }
-        if (shoot2 == true) {
-          digitalWrite(tool2A, LOW);
-          digitalWrite(tool2B, HIGH);
+        if (shoot_2 == true) {
+          digitalWrite(tool_2, LOW);
         }
-        if (shoot3 == true) {
-          digitalWrite(tool3A, LOW);
-          digitalWrite(tool3B, HIGH);
+        if (shoot_3 == true) {
+          digitalWrite(tool_3, LOW);
         }
       }
       else
       {
-        dod1 = idle1;
+        dod_1 = idle_1;
       }
       break;
   }
