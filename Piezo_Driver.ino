@@ -49,36 +49,36 @@ void receiveEvent() {
   }
   if (bitRead(i2c_message, 2) == 1 ) {
     drop_on_demand = on_1;
-	shoot_2 = true;
+    shoot_2 = true;
   }
   if (bitRead(i2c_message, 3) == 1 ) {
     drop_on_demand = on_1;
-	shoot_3 = true;
+    shoot_3 = true;
   }
   if (bitRead(i2c_message, 4) == 1 ) {
-	auto_shoot_0 = true;
+    auto_shoot_0 = true;
   }
   if (bitRead(i2c_message, 5) == 1 ) {
-	auto_shoot_1 = true;
+    auto_shoot_1 = true;
   }
   if (bitRead(i2c_message, 6) == 1 ) {
-	auto_shoot_2 = true;
+    auto_shoot_2 = true;
   }
   if (bitRead(i2c_message, 7) == 1 ) {
-	auto_shoot_3 = true;
+    auto_shoot_3 = true;
   }
   if (bitRead(i2c_message, 4) == 0 ) {
-	auto_shoot_0 = false;
+    auto_shoot_0 = false;
   }
   if (bitRead(i2c_message, 5) == 0 ) {
-	auto_shoot_1 = false;
+    auto_shoot_1 = false;
   }
   if (bitRead(i2c_message, 6) == 0 ) {
-	auto_shoot_2 = false;
+    auto_shoot_2 = false;
   }
   if (bitRead(i2c_message, 7) == 0 ) {
-	auto_shoot_3 = false;
-  } 
+    auto_shoot_3 = false;
+  }
 }
 
 
@@ -87,16 +87,16 @@ void loop() {
   switch (auto_drop) {
     case on_0:
       if (millis() - saved_time_0 < 50) {
-		if (auto_shoot_0 == true) {
-        digitalWrite(tool_0, HIGH);
+        if (auto_shoot_0 == true) {
+          digitalWrite(tool_0, HIGH);
         }
-		if (auto_shoot_1 == true) {
+        if (auto_shoot_1 == true) {
           digitalWrite(tool_1, HIGH);
         }
-		if (auto_shoot_2 == true) {
+        if (auto_shoot_2 == true) {
           digitalWrite(tool_2, HIGH);
         }
-		if (auto_shoot_3 == true) {
+        if (auto_shoot_3 == true) {
           digitalWrite(tool_3, HIGH);
         }
       }
@@ -106,16 +106,16 @@ void loop() {
       break;
     case off_0:
       if (millis() - saved_time_0 < 100) {
-		if (auto_shoot_0 == true) {
+        if (auto_shoot_0 == true) {
           digitalWrite(tool_0, LOW);
         }
-		if (auto_shoot_1 == true) {
+        if (auto_shoot_1 == true) {
           digitalWrite(tool_1, LOW);
         }
-		if (auto_shoot_2 == true) {
+        if (auto_shoot_2 == true) {
           digitalWrite(tool_2, LOW);
         }
-		if (auto_shoot_3 == true) {
+        if (auto_shoot_3 == true) {
           digitalWrite(tool_3, LOW);
         }
       }
@@ -158,16 +158,16 @@ void loop() {
       break;
     case off_1:
       if (millis() - saved_time_1 < 50) {
-		if (shoot_0 == true) {
+        if (shoot_0 == true) {
           digitalWrite(tool_0, LOW);
         }
-		if (shoot_1 == true) {
+        if (shoot_1 == true) {
           digitalWrite(tool_1, LOW);
         }
-		if (shoot_2 == true) {
+        if (shoot_2 == true) {
           digitalWrite(tool_2, LOW);
         }
-		if (shoot_3 == true) {
+        if (shoot_3 == true) {
           digitalWrite(tool_3, LOW);
         }
       }
