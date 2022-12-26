@@ -1,55 +1,61 @@
 
-GCODE Commands
-The printer can be controlled by sending values via i2c.
+# GCode
 
-Each set bit represents a printer command like:
+The printhead can be controlled by sending  
+flag bytes over I2C with the help of GCode.
+
+<br>
+<br>
+
+## Flag Bytes
+
+The flags are sent as 1 byte codes  
+with the following composition:
+
+<br>
+
+<table>
+    <tr align = center >
+        <th>7</th><th>6</th><th>5</th><th>4</th>
+        <th>3</th><th>2</th><th>1</th><th>0</th>
+    </tr>
+    <tr align = center >
+        <td colspan = 4 > Drop At Fixed <br> Frequency </td>
+        <td colspan = 4 > Dispense <br> One Drop</td>
+    </tr>
+</table>
+
+<br>
+
+*The drop frequency can be adjusted in the Arduino firmware.*
+
+<br>
+<br>
+
+## Commands
+
+Using the **[M260]** GCode command,  
+I2C data can be sent as shown below:
+
+<br>
+
+```gcode
+M260 A< Bus Address >
+M260 B< Data >
+M260 S< Flush >
+```
+
+<br>
+
+```gcode
+M260 A9  ; Arduino address
+M260 B15 ; Dispense a single drop on printhead 1 - 4
+M260 S1  ; Flush the buffer
+```
+
+<br>
 
 
-0 - everything off
+<!----------------------------------------------------------------------------->
 
-1 - single drop printhead 1
-
-2 - single drop printhead 2
-
-4 - single drop printhead 3
-
-8 - single drop printhead 4
-
-16 - drops at fixed frequency printhead 1
-
-32 - drops at fixed frequency printhead 2
-
-64 - drops at fixed frequency printhead 3
-
-128 - drops at fixed frequency printhead 4
-
-You can change the frequency in the Arduino Sketch
-
-
-The values can also be added to each other to eject drops from multiple printheads at once like if you send value 15 printhead 1, 2, 3 and 4 eject a drop.
-
-For sending the values you can use the M260 command like:
-
-M260 A9
-M260 B1
-M260 S1
-or
-M260 A9
-M260 B16
-M260 S1
-or
-M260 A9
-M260 B0
-M260 S1
-
-
-If you are using a CAM software for printing along paths you can set the following command for start ejecting drops:
-
-M260 A9
-M260 B16
-M260 S1
-And set the following command for stop ejecting drops:
-
-M260 A9
-M260 B0
-M260 S1
+[M260]: https://marlinfw.org/docs/gcode/M260.html
