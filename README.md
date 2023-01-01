@@ -4,10 +4,13 @@
 
 <div align = center>
 
-# DIY Inkjet Printer
+<pre>
 
-*An open source inkjet printer built*  
-*without industrial manufacturing.*
+<h1>DIY Inkjet Printer</h1>
+<i>An open source inkjet printer built</i> 
+<i>without industrial manufacturing.</i>
+
+</pre>
 
 <br>
 <br>
