@@ -17,7 +17,7 @@
     <table align = left>
         <tr>
             <td div align = center>
-                <img src = '../Resources/Thumbnails/4%20Color%20Flowers.webp'>
+                <img src = '../Resources/Thumbnails/4 Color Flowers.webp'>
                 <h4>4 Color Flowers</h4>
             </td>
         </tr>
@@ -28,7 +28,7 @@
     <table align = right>
         <tr>
             <td div align = center>
-                <img src = '../Resources/Thumbnails/Colorful%20Chameleon.webp'>
+                <img src = '../Resources/Thumbnails/Colorful Chameleon.webp'>
                 <h4>Colorful Chameleon</h4>
             </td>
         </tr>
@@ -39,7 +39,7 @@
     <table align = left>
         <tr>
             <td div align = center>
-                <img src = '../Resources/Thumbnails/4%20Colors%20On%20Paper.webp'>
+                <img src = '../Resources/Thumbnails/4 Colors On Paper.webp'>
                 <h4>4 Colors On Paper</h4>
             </td>
         </tr>
@@ -50,7 +50,7 @@
     <table align = right>
         <tr>
             <td div align = center>
-                <img src = '../Resources/Thumbnails/4%20Color%20Lines.webp'>
+                <img src = '../Resources/Thumbnails/4 Color Lines.webp'>
                 <h4>4 Color Lines</h4>
             </td>
         </tr>
@@ -61,7 +61,7 @@
     <table align = left>
         <tr>
             <td div align = center>
-                <img src = '../Resources/Thumbnails/Drop%20Prevention%20Duct.webp'>
+                <img src = '../Resources/Thumbnails/Drop Prevention Duct.webp'>
                 <h4>Drop Prevention Duct</h4>
             </td>
         </tr>
@@ -72,7 +72,7 @@
     <table align = right>
         <tr>
             <td div align = center>
-                <img src = '../Resources/Thumbnails/Drop%20Prevention%20Drain.webp'>
+                <img src = '../Resources/Thumbnails/Drop Prevention Drain.webp'>
                 <h4>Drop Prevention Drain</h4>
             </td>
         </tr>
@@ -86,15 +86,100 @@
     <table align = left>
         <tr>
             <td div align = center>
-                <img src = '../Resources/Thumbnails/4%20Color%20Drain%20Block.webp'>
+                <img src = '../Resources/Thumbnails/4 Color Drain Block.webp'>
                 <h4>4 Color Drain Block</h4>
             </td>
         </tr>
     </table>  
 </a>
 
-<br>
-<br>
+<a href = 'https://www.youtube.com/watch?v=BEvutcn0rZU'>
+    <table align = right>
+        <tr>
+            <td div align = center>
+                <img src = '../Resources/Thumbnails/Nozzle Drop Test.webp'>
+                <h4>Nozzle Drop Test</h4>
+            </td>
+        </tr>
+    </table>
+</a>
+
+<a href = 'https://www.youtube.com/watch?v=y70h7yNI6SM'>
+    <table align = left>
+        <tr>
+            <td div align = center>
+                <img src = '../Resources/Thumbnails/Pump & Driver Test.webp'>
+                <h4>Pump & Driver Test</h4>
+            </td>
+        </tr>
+    </table>  
+</a>
+
+<a href = 'https://www.youtube.com/watch?v=CGzuma2rmfg'>
+    <table align = right>
+        <tr>
+            <td div align = center>
+                <img src = '../Resources/Thumbnails/Ink Routing.webp'>
+                <h4>Ink Routing</h4>
+            </td>
+        </tr>
+    </table>
+</a>
+
+<a href = 'https://www.youtube.com/watch?v=uKSS1fRLO4E'>
+    <table align = left>
+        <tr>
+            <td div align = center>
+                <img src = '../Resources/Thumbnails/Working Pump Setup.webp'>
+                <h4>Working Pump Setup</h4>
+            </td>
+        </tr>
+    </table>  
+</a>
+
+<a href = 'https://www.youtube.com/watch?v=DvuNRbtYwx8'>
+    <table align = right>
+        <tr>
+            <td div align = center>
+                <img src = '../Resources/Thumbnails/Printhead Prototype.webp'>
+                <h4>Printhead Prototype</h4>
+            </td>
+        </tr>
+    </table>
+</a>
+
+<a href = 'https://www.youtube.com/watch?v=WMHr_fWR7tE'>
+    <table align = left>
+        <tr>
+            <td div align = center>
+                <img src = '../Resources/Thumbnails/Pump Prototype.webp'>
+                <h4>Pump Prototype</h4>
+            </td>
+        </tr>
+    </table>  
+</a>
+
+<a href = 'https://www.youtube.com/watch?v=q7PKq5F6wRo'>
+    <table align = right>
+        <tr>
+            <td div align = center>
+                <img src = '../Resources/Thumbnails/Ink Cycle.webp'>
+                <h4>Ink Cycle</h4>
+            </td>
+        </tr>
+    </table>
+</a>
+
+<a href = 'https://www.youtube.com/watch?v=RZApEstI2mw'>
+    <table align = center>
+        <tr>
+            <td div align = center>
+                <img src = '../Resources/Thumbnails/First Setup.webp'>
+                <h4>First Setup</h4>
+            </td>
+        </tr>
+    </table>
+</a>
 
 
 </div>
