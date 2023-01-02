@@ -55,10 +55,11 @@
 
 ## Applications
 
-*Possible ways of using this technology.*
+*The printhead could be used as an add-on for*
 
 <br>
 
+<kbd> <br>   $\huge\texttt{\textcolor{C}{𝗗𝗼𝘁 𝗠𝗮𝘁𝗿𝗶𝘅 𝗜𝗺𝗮𝗴𝗲𝘀}}$   <br> </kbd>   
 <kbd> <br>   $\huge\texttt{\textcolor{C}{𝗣𝗮𝗿𝘁 𝗟𝗮𝗯𝗲𝗹𝗶𝗻𝗴}}$   <br> </kbd>   
 <kbd> <br>   $\huge\texttt{\textcolor{C}{𝗕𝗶𝗻𝗱𝗲𝗿 𝗝𝗲𝘁}}$   <br> </kbd>
 
@@ -67,7 +68,43 @@
 
 <br>
 
-$\texttt{\textcolor{Warn}{＊}}$ *Components cannot be printed out of SLA resin if you want them to be food grade.*
+$\texttt{\textcolor{Warn}{＊}}$ *Components cannot be printed out of SLA resin and seals / connections have to be carefully chosen if you want them to be food grade.*
+
+<br>
+<br>
+
+## Backstory
+
+The printhead is controlled by an Arduino which can be controlled directly via i2c or via GCODE (M260) if you use RAMPS or another board which supports i2c.
+
+This is my attempt to build an open source inkjet printer by myself.
+
+I started this project because I wanted to build a binder jetting 3D printer but could not find any open source inkjet printer designs for this. So I started trying to build one.
+
+The toolhead design is a piezo printhead inspired by https://reprap.org/forum/read.php?153,52959,page=1 and https://reprap.org/wiki/Reprappable-inkjet.
+
+
+Back in 2019 after reading through the build logs of the Oasis 3DP I was searching on the internet if someone has ever tried to build an inkjet printer from scratch, at home, with simple electronics and without access to industrial production lines.
+
+I found something about that at the Reprap Forum and on thingiverse and tried to build their projects. After successfully building the projects I started the work on this project.
+
+The design goal of the project is to build a piezo inkjet printer from scratch.
+
+The first working build had a PMMA printhead and could if everything was aligned perfectly print with black ink (water + paint color).
+
+After that I started printing the printhead with a SLA 3D printer to be able to create internal channels for flushing the air out of the printhead through the nozzle.
+
+After some testing with it and building single and multi printhead builds I wanted to try printing in four colors or CMYK.
+
+I designed the needed parts for that, but I never tried them out until I recently attempted to write building instructions for that.
+
+For writing the instructions I redesigned the project to fit it on an Ender 3 and while doing that I figured out that the machine was far to unreliable to get it working at all. 
+
+So I had to find a way to make it more reliable.
+
+For that I designed SLA 3D printed piezo pumps instead of the piezo printheads, used MOSFETs and higher voltage for switching the piezos instead of the H bridges and used a vacuum duct to carry away the excess ink that would otherwise block the nozzle with a large ink drop.
+
+With these changes the printer should be ready to do hour long prints whitout failing due to design based problems.
 
 <br>
 
