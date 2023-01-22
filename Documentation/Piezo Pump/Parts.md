@@ -33,7 +33,7 @@ for mounting the pump assembly to the frame.
 
 ## Backplate
 
-A SLA 3D printed two chambered plate with 8 tapped  
+A SLA 3D printed two chambered plate with 8 untapped  
 holes and 2 terminals for connecting the in and output.
 
 <br>
