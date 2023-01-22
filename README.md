@@ -69,19 +69,19 @@
 <br>
 
 $\texttt{\textcolor{Warn}{＊}}$ *Components cannot be printed out of SLA resin and seals / connections*  
-*have to be carefully chosen if you want them to be food grade.*
+      *have to be carefully chosen if you want them to be food grade.*
 
 <br>
 <br>
 
 ## Backstory
 
-<!-- The printhead is controlled by an Arduino which can be controlled directly via i2c or via GCODE (M260) if you use RAMPS or another board which supports i2c. -->
-
 This is my attempt to build an open source inkjet printer by myself.
 
 I started this project because I wanted to build a binder jetting 3D  
 printer but couldn't find any open source inkjet printer designs.
+
+<br>
 
 Back in 2019 after reading through the build logs  
 of the Oasis 3D printer I was scouring the internet  
@@ -110,6 +110,8 @@ After that I designed a printhead with internal channels
 that could flush out the air through the nozzles and be  
 produced with a SLA 3D printer.
 
+<br>
+
 After some testing and creating single / multi printhead  
 builds I wanted to try printing in four colors, that is CMYK.
 
@@ -117,9 +119,13 @@ While I designed all the required parts, I never got around
 to assembling or even trying them out until I attempted to  
 write the **[Hackaday]** building instructions.
 
+<br>
+
 At the time I decided to redesigned the project to fit on  
 an Ender 3, this however also made me realize that the  
 machine was far too unreliable.
+
+<br>
 
 To remedy this, I changed the following:
 
@@ -133,6 +139,7 @@ To remedy this, I changed the following:
     ink that would otherwise block the nozzle  
     with large ink drops.
 
+<br>
 
 With these changes the printer should be ready to do hour  
 long prints without failing due to design based problems.
