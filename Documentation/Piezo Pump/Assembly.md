@@ -3,30 +3,15 @@
 
 # Piezo Pump <br> Assembly  
 
+Instructions for assembling one piezo  
+pump from the parts shown below.
+
+<br>
+<br>
+
 
 
 </div>
-
-Assembling the Piezo Pumps
-The heart of the machine are the four piezo pumps which are made of the following parts:
-
-- piezo pump body
-
-- piezo pump cover / mounting bracket
-
-- 8x M3x20 screws
-
-- 8x M3 nuts
-
-- 2x O - ring 21x25x2mm
-
-- 2x 27mm piezo disc
-
-- 2x check valve
-
-- petrol filter
-
-- 6mm silicone tubing
 
 <br>
 <br>
@@ -45,6 +30,15 @@ Use a file and or sandpaper to carefully shape them up.
 <img
     width = 400
     src = '../../Resources/Piezo Pump/Steps/Terminal Ridges.svg'
+/>
+
+<img
+    height = 250
+    src = '../../Resources/Piezo Pump/Images/Terminal Ridges Before.jpg'
+/>    
+<img
+    height = 250
+    src = '../../Resources/Piezo Pump/Images/Terminal Ridges After.jpg'
 />
 
 <br>
@@ -128,18 +122,6 @@ this could damage and break your plates.
 <br>
 
 
-
-Image 33
-
-Image 34
-
-Image 35
-
-Image 36
-
-Image 37
-
-Next you need to put the tubes and check valves onto the connections. For that it could be necessary remove ridges at the connection by filing, to get a sealed connection.
 
 Image 38
 Image 39

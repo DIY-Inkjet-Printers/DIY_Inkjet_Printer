@@ -9,7 +9,7 @@
 
 <img
     height = 400
-    src = '../../Resources/Piezo Pump/Parts.jpg'
+    src = '../../Resources/Piezo Pump/Images/Parts.jpg'
 />
 
 </div>
