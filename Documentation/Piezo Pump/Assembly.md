@@ -9,7 +9,10 @@ pump from the parts shown below.
 <br>
 <br>
 
-
+<img
+    width = 400
+    src = '../../Resources/Piezo Pump/Steps/Before.webp'
+/>
 
 </div>
 
