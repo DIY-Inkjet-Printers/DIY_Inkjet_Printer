@@ -32,6 +32,32 @@ The heart of the machine are the four piezo pumps which are made of the followin
 <br>
 <br>
 
+### Insert Actuators
+
+Insert the piezo actuator discs into the chambers and  
+route their wires through either the left or right opening.
+
+<br>
+
+Next layer the cut-to-shape O-rings on top of the actuator,  
+with the gap pointing towards the direction of the wires.
+
+<img
+    height = 200
+    src = '../../Resources/Piezo Pump/Steps/Insert Actuators A.webp'
+/>    
+<img
+    height = 200
+    src = '../../Resources/Piezo Pump/Steps/Insert Actuators B.webp'
+/>    
+<img
+    height = 200
+    src = '../../Resources/Piezo Pump/Steps/Insert Actuators C.webp'
+/>
+
+<br>
+<br>
+
 ### Combining Plates
 
 Align the front and back plate on top of each other.
@@ -52,6 +78,8 @@ Place the nuts in the indentations of the front plate.
     src = '../../Resources/Piezo Pump/Steps/A-2.webp'
 />
 
+<br>
+
 Insert the screws from the back and lightly fasten them  
 to the point where the screw - nut pairs stay together.
 
@@ -71,6 +99,8 @@ Flip the assembly on it's head and tighten the screws.
     src = '../../Resources/Piezo Pump/Steps/A-4.webp'
 />
 
+<br>
+
 > **Warning** Don't over tighten your screws,  
 this could damage and break your plates.
 
@@ -81,18 +111,9 @@ this could damage and break your plates.
 
 Image 33
 
-
-First, insert the screws from the bottom through the pump body and place the piezo discs with the O - ring in the pump chambers (cut out a piece of the o - ring for the solder connection on the piezo).
-
 Image 34
 
-
-Put the pump cover on top of it...
-
 Image 35
-
-
-and put the nuts onto the scews. Then carefully lift the parts  and tighten the screws from the bottom.
 
 Image 36
 
