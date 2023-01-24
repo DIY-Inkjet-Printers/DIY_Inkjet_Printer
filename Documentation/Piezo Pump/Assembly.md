@@ -28,6 +28,24 @@ The heart of the machine are the four piezo pumps which are made of the followin
 
 - 6mm silicone tubing
 
+<br>
+<br>
+
+### Prepare Prints
+
+When SLA printing the back plate of the assembly, the  
+liquid connection terminals may not be perfectly circular. 
+
+<br>
+
+Use a file and or sandpaper to carefully shape them up.
+
+<br>
+
+<img
+    width = 400
+    src = '../../Resources/Piezo Pump/Steps/Terminal Ridges.svg'
+/>
 
 <br>
 <br>
@@ -41,6 +59,8 @@ route their wires through either the left or right opening.
 
 Next layer the cut-to-shape O-rings on top of the actuator,  
 with the gap pointing towards the direction of the wires.
+
+<br>
 
 <img
     height = 200
@@ -58,7 +78,7 @@ with the gap pointing towards the direction of the wires.
 <br>
 <br>
 
-### Combining Plates
+### Combine Plates
 
 Align the front and back plate on top of each other.
 
