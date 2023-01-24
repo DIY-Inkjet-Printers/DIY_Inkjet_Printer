@@ -10,9 +10,18 @@ pump from the parts shown below.
 <br>
 
 <img
-    width = 400
+    height = 400
     src = '../../Resources/Piezo Pump/Steps/Before.webp'
+/>                
+<img
+    height = 400
+    src = '../../Resources/Piezo Pump/Steps/After.webp'
 />
+
+<br>
+<br>
+
+> **Note** The diagrams components don't have perfectly accurate sizes.
 
 </div>
 
