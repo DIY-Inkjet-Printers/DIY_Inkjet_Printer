@@ -124,21 +124,38 @@ this could damage and break your plates.
 <br>
 <br>
 
+## Connect Tubing
+
+Connect the terminals of the back plate to  
+the check valves using your flexible tubing.
+
+<br>
+
+The terminal with the longer inner channel  
+is the input side and should have it's check  
+valve let fluid flow towards it.
+
+<br>
+
+Ensure that the check valve on the output  
+side is pointing away from the assembly.
+
+<br>
+
+<img
+    width = 500
+    src = '../../Resources/Piezo Pump/Steps/Connect Tubing.webp'
+/>
+
+<img
+    width = 500
+    src = '../../Resources/Piezo Pump/Images/Connect Tubing.webp'
+/>
+
+<br>
+
+> **Warning** Make sure the tubing is  
+properly connected and sealing.
 
 
-Image 38
-Image 39
-
-After that you can add the check valves to the pump...
-
-Image 40
-
-and connect the ink container and printhead to the pump.
-
-Image 41
-
-For keeping the ink clean add the petrol filter to the tube in the ink container.
-
-Image 42
-
-Mount the pump with two M5 screws and nuts to your machine and you have finished the assembly of the pump.
+<br>
