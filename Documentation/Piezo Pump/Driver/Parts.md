@@ -1,6 +1,9 @@
 
-# Piezo Pump Driver
+<div align = center>
 
+# Piezo Pump Driver <br> Components
+
+</div>
 
 <br>
 <br>
@@ -41,16 +44,5 @@
     *for isolated switching and discharging of the*  
     *piezo actuators.*
 
+<br>
 
-Image 43
-
-Image 4
-
-Image 44
-
-Image 45
-
-Image 46
-
-
-<!----------------------------------------------------------------------------->
