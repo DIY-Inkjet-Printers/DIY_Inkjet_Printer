@@ -38,13 +38,22 @@
 <br>
 <br>
 
+[<img height = 300 width = 25% align = left  src = './Resources/Empty.svg' >][#]
+[<img height = 300 width = 25% align = right src = './Resources/Empty.svg' >][#]
+
 ## Hardware
+
+<br>
 
 [![Button Frame]][Frame]   
 [![Button Pump]][Pump]   
 [![Button Head]][Head]
 
+<br>
+
 ## Software
+
+<br>
 
 [![Button Firmware]][Firmware]   
 [![Button GCode]][GCode]
@@ -161,6 +170,8 @@ long prints without failing due to design based problems.
 <br>
 
 <!----------------------------------------------------------------------------->
+
+[#]: #
 
 [Firmware]: Documentation/Firmware
 [Videos]: Documentation/Videos.md
