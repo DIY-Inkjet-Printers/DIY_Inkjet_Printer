@@ -38,6 +38,20 @@
 <br>
 <br>
 
+## Hardware
+
+[![Button Frame]][Frame]   
+[![Button Pump]][Pump]   
+[![Button Head]][Head]
+
+## Software
+
+[![Button Firmware]][Firmware]   
+[![Button GCode]][GCode]
+
+<br>
+<br>
+
 </div>
 
 ## Printing
@@ -148,7 +162,12 @@ long prints without failing due to design based problems.
 
 <!----------------------------------------------------------------------------->
 
+[Firmware]: Documentation/Firmware
 [Videos]: Documentation/Videos.md
+[Frame]: Documentation/Machine%20Frame
+[GCode]: Documentation/GCode
+[Pump]: Documentation/Piezeo%20Pump
+[Head]: Documentation/Printhead
 
 
 [Hackaday]: https://hackaday.io/project/167446-diy-inkjet-printer
@@ -160,3 +179,9 @@ long prints without failing due to design based problems.
 
 [Button Hackaday]: https://img.shields.io/badge/Hackaday-1A1A1A?style=for-the-badge&logoColor=white&logo=Hackaday
 [Button Videos]: https://img.shields.io/badge/Videos-DA1F26?style=for-the-badge&logoColor=white&logo=YouTube
+
+[Button Firmware]: https://img.shields.io/badge/Firmware-319795?style=for-the-badge
+[Button GCode]: https://img.shields.io/badge/GCode-8669AE?style=for-the-badge
+[Button Frame]: https://img.shields.io/badge/Frame-6E6E6E?style=for-the-badge
+[Button Head]: https://img.shields.io/badge/Head-CD9834?style=for-the-badge
+[Button Pump]: https://img.shields.io/badge/Pump-00A1D6?style=for-the-badge
