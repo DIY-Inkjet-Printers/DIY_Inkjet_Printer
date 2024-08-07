@@ -1,0 +1,203 @@
+
+
+Machine ​Parts Description
+The machine consists of the following parts:
+
+Machine frame with mechanics and stepper motors
+
+Image 1
+
+Printer controller with stepper drivers, 12V power supply and vacuum pump + Step Down Converter
+
+Image 2
+
+Image 3
+
+
+Piezo driver with Arduino Nano, transformer, 12V power supply, rectifier, MOSFET switch, fuses and WAGO terminals
+
+
+Image 4
+Image 5
+
+Piezo pumps with silicone tubing, check valves, ink and excess ink container, ink filters and printhead
+
+Image 6 - 12
+
+
+
+
+Machine Frame
+You can start by choosing the machine frame that you want to use for your DIY Inkjet Printer. I used an Ender 3 from which I removed all electronics besides the stepper motors, but you can also use any other machine frame. The machine needs no Z axis and endstops are also optional.
+
+Image 1
+
+
+
+3D Printing the Parts
+For the machine there are only a few parts that you have to 3D print. I printed the liquid carrying parts in tansparent SLA resin to get them water tight and to be able to see what's going on inside (like air bubbles, flow or leaking).
+
+Image 13 - 15
+
+Needed parts are: 
+
+The piezo pump body
+
+Image 16
+
+
+The piezo pump cover/mounting bracket
+
+Image 18
+
+The printhead top (with tube connections)
+
+Image 19
+
+The printhead middle (with threads)
+
+Image 20
+
+The printhead bottom (with vacuum duct
+    
+Image 21    
+
+WAGO mounting bracket
+
+Image 22
+
+A mounting bracket to mount the printhead on your machine, which you have to design by yourself
+
+
+
+
+Assembling the Printhead
+For the assembly of the printhead you need the following parts:
+
+- printhead top
+
+- printhead middle
+
+- printhead bottom
+
+- 10x M3x20 screws
+
+- 10x M3 nuts
+
+- 4x nozzle 0.2mm
+
+
+Image 23
+
+I split the printhead in three parts for easier printing.
+
+First you have to screw in the nozzles into the middle printhead part.
+
+
+Image 24
+
+Now, you just have to stack the top onto the middle and the middle onto the bottom printhead part, place the nuts onto the top printhead part and screw in the screws through the bottom printhead part and you have finished the assembly.
+
+Image 25 - 30
+
+What's left to do is designing and printing your own printhead mounting bracket and fitting the printhead to your machine with two M3 screws and nuts.
+
+
+Image 31
+
+
+
+
+
+Assembling the WAGO Mounting Bracket
+The purpose of the bracket with the WAGO 221-413 terminals is to be able to replace the piezo discs easily if they should stop working and for reversing the polarity if needed. 
+
+Image 22
+
+You just have to push in the WAGO 221-413 terminals with a pipe wrench and mount the bracket somewhere at the machine.
+
+The design has a tight fit, so if you can not push in the terminals without breaking the printed part just print it a bit larger - or smaller if the terminals sit too loose.
+
+Image 5
+
+Every pump has a fuse to protect the electronics in the case a piezo pump would get shorted out because of leaking. For these I used the smallest value fuse I could find because the piezo discs need only a very small current for operation.
+
+
+
+
+
+
+Ink and Waste Container
+If you use four colors you will need four ink containers and one waste container.
+
+I used some empty jelly jars for that and drilled two 5mm holes into the lid to fit in the 6mm silicone tube.
+
+At the ink containers one tube is connected to the piezo pump and the other one is just there to prevent the buildup of vacuum and for adding ink.
+
+At the waste contsiner one tube is connected to the vacuum duct at the printhead and the other one is connected to a small 12V vacuum pump. Its purpose is to draw the excess ink from the nozzles into the waste container, because it
+
+would otherwise form a drop which would block the nozzle until it drops down on the workpiece.
+
+
+Image 9
+
+Image 8
+
+Image 32
+
+Image 3
+
+
+
+
+
+
+
+
+Machine Electronics
+
+Image 2
+
+For controlling the machine I used an Arduino Mega 2560 + RAMPS 1.6+ with two TMC 2130 stepper drivers which is powered by a 12V 5A power supply.
+
+The RAMPS is connected to the two stepper motors and also to an Arduino Nano via i2c, GND and 5V connection.
+
+There is also an LM2596 wired to the 12V power supply which is connected to the vacuum pump to reduce the voltage for less noise - so it is just optional.
+
+The mains power is distributed to the 12V power supply and the other electronics box via WAGO 221-413 terminals.
+
+
+
+
+
+
+
+
+
+
+Machine Firmware
+The printer controller (Arduino MEGA 2560) is running Marlin Firmware which needs only the configuration for your machine and one change in the Configuration_adv.h to be able to send I2c data via gcode:
+
+#define EXPERIMENTAL_I2CBUS
+
+
+
+Arduino Sketch
+Here is the sketch for the Arduino Nano for receiving i2c data and switching the piezo discs:
+
+
+
+
+
+Startup
+After you have done all these steps the machine should be ready to use. Fill ink (I used water mixed with cheap ink) into the ink containers and flush the tubes by using a syringe and drawing the ink to the printhead.
+
+Make sure everything is seal, because if ink leaks on the backside of the piezo discs it will short out and damage them. If everything is OK you can turn on the printer and connect the printer controller over USB with your PC.
+
+Start your favorite GCODE sender or Slicer Software and connect to your printer.
+
+
+
+
+
+With that, I think everything about the project is said. If you have any questions you can ask me. Thank you very much for the interest in my project :)
